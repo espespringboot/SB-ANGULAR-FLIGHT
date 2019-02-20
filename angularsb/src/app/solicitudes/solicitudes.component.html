@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<h3>Solicitud de Vuelo</h3>
+<div class="container">
+<div [hidden]="submitted" >
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Nombre
+      <input type="text" class="form-control" id="nombre" required [(ngModel)]="svuelo.nombre" name="nombre">
+    </label>
+    </div>
+
+    <div class="form-group">
+      <label for="dia_vuelo">Dia de Vuelo
+      <input type="date" class="form-control" id="dia_vuelo" required [(ngModel)]="svuelo.dia_vuelo" name="dia_vuelo">
+    </label>
+    </div>
+
+    <div class="form-group">
+      <label for="destino">Destino
+      <input type="text" class="form-control" id="destino" required [(ngModel)]="svuelo.destino" name="destino">
+    </label>
+    </div>
+
+    <div class="form-group">
+      <label for="fecha_solicitud">Fecha de solicitud
+      <input type="date" class="form-control" id="fecha_solicitud" required [(ngModel)]="svuelo.fecha_solicitud" name="fecha_solicitud">
+    </label>
+    </div>
+
+    <div class="form-group">
+      <label for="status">Status
+      <input type="text" class="form-control" id="status" required [(ngModel)]="svuelo.status" name="status">
+    </label>
+    </div>
+
+    <button type="submit" class="btn btn-success">Crear</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <button class="btn btn-success" (click)="newS()">Crear</button>
+</div>
+</div>

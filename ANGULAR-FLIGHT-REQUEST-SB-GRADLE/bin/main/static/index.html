@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">  
+ <body ng-app="myApp">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <div ng-controller="Solicitud_VueloController">
+    <h1 align="center"> Flight Request </h1>
+	<form name="solicitud_vueloForm" >
+	
+	
+<div class="container">	
+
+	      <div class="form-group" >
+        <label class=blue_font>Nombre:</label>
+        <input class=form-control type="text" id="Nombre" ng-model="solicitud_vueloForm.nombre" placeholder="Nombre" autocomplete="on">
+    </div>
+	
+    <div class="form-group" >
+        <label class=blue_font>Destino</label>
+        <input class=form-control type="text" id="Destino" ng-model="solicitud_vueloForm.destino" placeholder="Destino" autocomplete="on">
+    </div>
+    
+    <div class="form-group" >
+        <label class=blue_font>Dia de Vuelo</label>
+        <input class=form-control type="date" id="Dia_Vuelo" ng-model="solicitud_vueloForm.dia_vuelo" placeholder="Dia_Vuelo" autocomplete="on">
+    </div>
+    
+    <div class="form-group" >
+        <label class=blue_font>Fecha Solicitud:</label>
+        <input class=form-control type="date" id="Fecha_Solicitud" ng-model="solicitud_vueloForm.fecha_solicitud" placeholder="Fecha_Solicitud" autocomplete="on">
+    </div>
+    
+    	<div class="form-group" >
+        <label class=blue_font>Status</label>
+        
+        <input class=form-control type="text" id="Status" ng-model="solicitud_vueloForm.status" placeholder="Status" autocomplete="on">
+    </div>
+    
+ 
+    
+  
+ 
+
+ <div class="btn-wrapper">
+  <div class="row-gutter-5">
+    <div class="row-gutter-5">
+      <button class="btn btn-success" type="button" data-ng-click="create()" id="Create" >Create</button>
+    </div>
+
+</div>     
+   </div>
+  </div>
+</div>
+	
+	
+	 
+	      
+	</form>
+	</div>
+	<script src="./js/angular.min.js"></script>
+	<script src="./js/angular-resource.min.js"></script>
+	<script src="./js/app.js"></script>
+	<link rel="stylesheet" href="./css/style.css">	
+	<link rel="stylesheet" href="./css/theme-default.css">
+	<link rel="stylesheet" href="./css/theme-blue.css">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/custom.css">
+ </body>
+</html>   
